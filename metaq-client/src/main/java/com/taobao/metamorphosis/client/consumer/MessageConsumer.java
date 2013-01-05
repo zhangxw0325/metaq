@@ -1,0 +1,120 @@
+package com.taobao.metamorphosis.client.consumer;
+
+import java.util.Collection;
+import java.util.concurrent.TimeUnit;
+
+import com.taobao.metamorphosis.client.Shutdownable;
+import com.taobao.metamorphosis.client.consumer.storage.OffsetStorage;
+import com.taobao.metamorphosis.cluster.Partition;
+import com.taobao.metamorphosis.exception.MetaClientException;
+
+
+/**
+ * 消息消费者，线程安全，推荐复用
+ * 
+ * @author boyan
+ * @Date 2011-4-21
+ * 
+ */
+public interface MessageConsumer extends Shutdownable {
+
+    /**
+     * 获取指定topic和分区下面的消息，默认超时10秒
+     * 
+     * @param topic
+     * @param partition
+     * @return 消息迭代器，可能为null
+     */
+    @Deprecated
+    public MessageIterator get(String topic, Partition partition, long offset, int maxSize)
+            throws MetaClientException, InterruptedException;
+
+
+    /**
+     * 获取指定topic和分区下面的消息，在指定时间内没有返回则抛出异常
+     * 
+     * @param topic
+     * @param partition
+     * @param timeout
+     * @param timeUnit
+     * @return 消息迭代器，可能为null
+     * @throws TimeoutException
+     */
+    public MessageIterator get(String topic, Partition partition, long offset, int maxSize, long timeout,
+            TimeUnit timeUnit) throws MetaClientException, InterruptedException;
+
+
+    public DequeueResult dequeue(String topic, Partition partition, long offset, int maxSize)
+            throws MetaClientException, InterruptedException;
+
+
+    public DequeueResult dequeue(String topic, Partition partition, long offset, int maxSize, long timeout,
+            TimeUnit timeUnit) throws MetaClientException, InterruptedException;
+
+
+    /**
+     * 订阅指定的消息，传入MessageListener，当有消息达到的时候主动通知MessageListener，请注意，
+     * 调用此方法并不会使订阅关系立即生效， 只有在调用complete方法后才生效，此方法可做链式调用
+     * 
+     * @param topic
+     *            订阅的topic
+     * @param maxSize
+     *            订阅每次接收的最大数据大小,不能超过1M
+     * @param messageListener
+     *            消息监听器
+     */
+    public MessageConsumer subscribe(String topic, int maxSize, MessageListener messageListener)
+            throws MetaClientException;
+
+
+    /**
+     * 订阅指定的消息，传入MessageListener，当有消息达到的时候主动通知MessageListener，请注意，
+     * 调用此方法并不会使订阅关系立即生效， 只有在调用complete方法后才生效，此方法可做链式调用
+     * 
+     * @param topic
+     * @param maxSize
+     * @param messageListener
+     * @param features
+     * @return
+     * @throws MetaClientException
+     */
+    public MessageConsumer subscribe(String topic, int maxSize, MessageListener messageListener,
+            String[] messageTypes) throws MetaClientException;
+
+
+    /**
+     * 批量订阅消息,请注意，调用此方法并不会使订阅关系立即生效，只有在调用complete方法后才生效。
+     * 
+     * @param subscriptions
+     */
+    public void setSubscriptions(Collection<Subscription> subscriptions) throws MetaClientException;
+
+
+    /**
+     * 使得已经订阅的topic生效,此方法仅能调用一次,再次调用无效并将抛出异常
+     */
+    public void completeSubscribe() throws MetaClientException;
+
+
+    /**
+     * 返回此消费者使用的offset存储器，可共享给其他消费者
+     * 
+     * @return
+     */
+    public OffsetStorage getOffsetStorage();
+
+
+    /**
+     * 停止消费者
+     */
+    public void shutdown() throws MetaClientException;
+
+
+    /**
+     * 返回消费者配置
+     * 
+     * @return
+     */
+    public ConsumerConfig getConsumerConfig();
+
+}

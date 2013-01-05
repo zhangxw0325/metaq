@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GBK"?><!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean name="metaStoreConfig" class="com.taobao.metaq.store.MetaStoreConfig">
+		<property name="master" value="true" />
+		<property name="groupCommitEnable" value="false" />
+		<property name="mapedFileSizeLogics" value="8388608" />
+		<property name="storePathPhysic" value="/metadata/physic" />
+		<property name="deleteWhen" value="04" />
+		<property name="fileReservedTime" value="24" />
+		<property name="diskMaxUsedSpaceRatio" value="75" />
+		<property name="maxTransferCountOnMessageInMemory" value="32" />
+		<property name="maxTransferCountOnMessageInDisk" value="8" />
+		<property name="totalPhysicMemory" value="5" />
+	</bean>
+</beans>

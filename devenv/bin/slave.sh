@@ -1,0 +1,1 @@
+sh start.sh -Fmetaslave=../conf/async_slave.properties

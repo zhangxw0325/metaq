@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+	<id>tools</id>
+	<baseDirectory>taobao-metaq</baseDirectory>
+	<formats>
+		<format>dir</format>
+		<format>tar.gz</format>
+	</formats>
+	<fileSets>
+		<fileSet>
+			<includes>
+				<include>metaq-tools/bin/*</include>
+				<include>metaq-tools/conf/*</include>
+			</includes>
+			<excludes>
+				<exclude>**/src/**</exclude>
+				<exclude>**/target/**</exclude>
+				<exclude>**/.*/**</exclude>
+			</excludes>
+		</fileSet>
+	</fileSets>
+	<moduleSets>
+		<moduleSet>
+			<includes>
+				<include>com.taobao.metaq:metaq-tools</include>
+			</includes>
+			<binaries>
+				<outputDirectory>metaq-tools/lib/</outputDirectory>
+				<unpack>false</unpack>
+				<dependencySets>
+					<dependencySet>
+						<outputDirectory>metaq-tools/lib</outputDirectory>
+					</dependencySet>
+				</dependencySets>
+			</binaries>
+		</moduleSet>
+	</moduleSets>
+</assembly>
