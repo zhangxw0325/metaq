@@ -4,9 +4,11 @@ MetaqÊÇÒ»¿î·Ö²¼Ê½£¬¸ßĞÔÄÜ£¬¸ß¿É¿¿µÄÏûÏ¢ÖĞ¼ä¼ş£¬ÔÚÌÔ±¦¼°°¢Àï°Í°Í×Ó¹«Ë¾±»¹ã·ºÓ¦ÓÃ£
 
 ## ÈçºÎ¿ªÊ¼
 
-[ÇëÔÄ¶ÁMetaqÏà¹ØÎÄµµ](https://github.com/taobao/metaq/wiki/Metaq%E6%96%87%E6%A1%A3%E5%85%A5%E5%8F%A3)
+[ÇëÔÄ¶ÁMetaqÏà¹ØÎÄµµ](https://github.com/taobao/metaq/wiki)
 
 ## ¿ªÔ´Ğ­Òé
 
 [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 Copyright By taobao.com
+
+## ÁªÏµÎÒÃÇ
