@@ -14,7 +14,4 @@ Copyright By taobao.com
 ## 联系我们
 * [向我们提交新需求，BUG或获得技术支持](https://github.com/taobao/metaq/issues/new)
 * 通过新浪微博关注我们 [@淘宝Metaq](http://weibo.com/tbmetaq)
-* 开发团队成员，分别为公司花名与真名
-** 誓嘉(王小瑞)
-** 兰生(朱杰)
-** 平威(陆学慧)
+* 开发团队成员，分别为公司花名与真名 --- 誓嘉(王小瑞) 兰生(朱杰) 平威(陆学慧)
