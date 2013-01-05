@@ -12,3 +12,6 @@ MetaqÊÇÒ»¿î·Ö²¼Ê½£¬¸ßÐÔÄÜ£¬¸ß¿É¿¿µÄÏûÏ¢ÖÐ¼ä¼þ£¬ÔÚÌÔ±¦¼°°¢Àï°Í°Í×Ó¹«Ë¾±»¹ã·ºÓ¦ÓÃ£
 Copyright By taobao.com
 
 ## ÁªÏµÎÒÃÇ
+* [ÏòÎÒÃÇÌá½»ÐÂÐèÇó£¬BUG»ò»ñµÃ¼¼ÊõÖ§³Ö](https://github.com/taobao/metaq/issues/new)
+* Í¨¹ýÐÂÀËÎ¢²©ÁªÏµÎÒÃÇ @ÌÔ±¦Metaq
+* ¿ª·¢ÍÅ¶Ó³ÉÔ±
