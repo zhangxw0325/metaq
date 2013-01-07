@@ -4,7 +4,8 @@ MetaqÊÇÒ»¿î·Ö²¼Ê½£¬¸ßĞÔÄÜ£¬¸ß¿É¿¿µÄÏûÏ¢ÖĞ¼ä¼ş£¬ÔÚÌÔ±¦¼°°¢Àï°Í°Í×Ó¹«Ë¾±»¹ã·ºÓ¦ÓÃ£
 
 ## ÈçºÎ¿ªÊ¼
 
-[ÇëÔÄ¶ÁMetaqÏà¹ØÎÄµµ](https://github.com/taobao/metaq/wiki)
+* [ÇëÔÄ¶ÁMetaqÏà¹ØÎÄµµ](https://github.com/taobao/metaq/wiki)
+* [ÏÂÔØ°²×°°ü](https://github.com/taobao/metaq/wiki/download)
 
 ## ¿ªÔ´Ğ­Òé
 
